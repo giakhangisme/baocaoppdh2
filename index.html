@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo cáo Kế Hoạch Dạy Học Toán 10</title>
+    <title>Báo cáo nhóm 5 </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,39 +12,25 @@
             font-family: 'Inter', sans-serif;
             background-color: #f0f4ff;
         }
-
         .nav-link {
             transition: all 0.3s ease;
             border-bottom: 2px solid transparent;
         }
-
-        .nav-link.active,
-        .nav-link:hover {
+        .nav-link.active, .nav-link:hover {
             border-bottom-color: #6366f1;
             color: #4338ca;
         }
-
         .page {
             display: none;
             animation: fadeIn 0.5s ease-in-out;
         }
-
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
         .page.active {
             display: block;
         }
-
         .content-container {
             transition: max-height 0.7s ease-in-out, opacity 0.5s ease-in-out, padding 0.7s ease;
             max-height: 0;
@@ -53,122 +38,41 @@
             overflow: hidden;
             padding: 0 1.5rem;
         }
-
         .week-item.active .content-container {
             max-height: 4000px;
             opacity: 1;
             padding: 1.5rem 0.5rem;
         }
-
         .week-item.active .week-button {
-            background-color: white;
-            color: #4f46e5;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+             background-color: white;
+             color: #4f46e5;
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-
         .week-item.active .arrow-icon {
             transform: rotate(180deg);
         }
-
         .arrow-icon {
             transition: transform 0.4s ease;
         }
-
-        .knowledge-link {
-            background-color: #eef2ff;
-            border-left: 4px solid #6366f1;
-        }
-
-        .new-knowledge {
-            background-color: #f5f3ff;
-            border-left: 4px solid #8b5cf6;
-        }
-
-        .review-card {
-            background-color: #fffbeb;
-            border-left-color: #facc15 !important;
-        }
-
-        .review-card .topic-tag {
-            background-color: #fef3c7 !important;
-            color: #ca8a04 !important;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            bottom: 10px;
-            width: 4px;
-            background-color: #e2e8f0;
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -35px;
-            top: 16px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: white;
-            border: 4px solid;
-            z-index: 1;
-        }
-
-        .timeline-item.chapter1::before {
-            border-color: #818cf8;
-        }
-
-        .timeline-item.chapter2::before {
-            border-color: #60a5fa;
-        }
-
-        .timeline-item.chapter3::before {
-            border-color: #38bdf8;
-        }
-
-        .timeline-item.chapter4::before {
-            border-color: #a78bfa;
-        }
-
-        .timeline-item.review::before {
-            border-color: #facc15;
-        }
-
-        .comparison-table th {
-            background-color: #eef2ff;
-        }
-
-        .comparison-table td,
-        .comparison-table th {
-            padding: 12px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .comparison-table tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        mark {
-            background-color: #fde047;
-            padding: 0 2px;
-            border-radius: 2px;
-        }
+        .knowledge-link { background-color: #eef2ff; border-left: 4px solid #6366f1; }
+        .new-knowledge { background-color: #f5f3ff; border-left: 4px solid #8b5cf6; }
+        .review-card { background-color: #fffbeb; border-left-color: #facc15 !important; }
+        .review-card .topic-tag { background-color: #fef3c7 !important; color: #ca8a04 !important; }
+        .timeline { position: relative; padding-left: 40px; }
+        .timeline::before { content: ''; position: absolute; left: 10px; top: 10px; bottom: 10px; width: 4px; background-color: #e2e8f0; border-radius: 2px; }
+        .timeline-item { position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -35px; top: 16px; width: 20px; height: 20px; border-radius: 50%; background-color: white; border: 4px solid; z-index: 1; }
+        .timeline-item.chapter1::before { border-color: #818cf8; }
+        .timeline-item.chapter2::before { border-color: #60a5fa; }
+        .timeline-item.chapter3::before { border-color: #38bdf8; }
+        .timeline-item.chapter4::before { border-color: #10b981; } /* Changed to green */
+        .timeline-item.review::before { border-color: #facc15; }
+        .comparison-table th { background-color: #eef2ff; }
+        .comparison-table td, .comparison-table th { padding: 12px; border: 1px solid #e2e8f0; }
+        .comparison-table tr:nth-child(even) { background-color: #f8fafc; }
+        mark { background-color: #fde047; padding: 0 2px; border-radius: 2px; }
     </style>
 </head>
-
 <body class="text-gray-800">
 
     <!-- Header & Navigation -->
@@ -178,28 +82,24 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <i class="fas fa-book-open text-3xl text-indigo-600"></i>
-                    <span class="ml-3 text-xl font-bold text-slate-700">Báo cáo KHDH Toán 10</span>
+                    <span class="ml-3 text-xl font-bold text-slate-700">PPDH 2 - LỚP THẦY ĐẠT</span>
                 </div>
                 <!-- Navigation -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#" class="nav-link active text-lg font-semibold text-slate-600 py-2"
-                        data-target="page-home">Kế hoạch Giảng dạy</a>
-                    <a href="#" class="nav-link text-lg font-semibold text-slate-600 py-2"
-                        data-target="page-analysis">Phân tích & So sánh</a>
+                    <a href="#" class="nav-link active text-lg font-semibold text-slate-600 py-2" data-target="page-home">Kế hoạch Giảng dạy</a>
+                    <a href="#" class="nav-link text-lg font-semibold text-slate-600 py-2" data-target="page-analysis">Phân tích & So sánh</a>
                 </nav>
                 <!-- Search Bar -->
                 <div class="flex items-center">
                     <div class="relative">
-                        <input id="search-bar" type="text" placeholder="Tìm kiếm nội dung..."
-                            class="w-40 sm:w-64 pl-10 pr-4 py-2 border border-slate-300 rounded-full focus:ring-2 focus:ring-indigo-400 focus:outline-none transition-all duration-300">
+                        <input id="search-bar" type="text" placeholder="Tìm kiếm nội dung..." class="w-40 sm:w-64 pl-10 pr-4 py-2 border border-slate-300 rounded-full focus:ring-2 focus:ring-indigo-400 focus:outline-none transition-all duration-300">
                         <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
                     </div>
                 </div>
             </div>
-            <!-- Mobile Navigation -->
+             <!-- Mobile Navigation -->
             <nav class="md:hidden flex justify-center space-x-4 pb-4 border-t border-slate-200">
-                <a href="#" class="nav-link active font-semibold text-slate-600 py-2" data-target="page-home">Kế
-                    hoạch</a>
+                <a href="#" class="nav-link active font-semibold text-slate-600 py-2" data-target="page-home">Kế hoạch</a>
                 <a href="#" class="nav-link font-semibold text-slate-600 py-2" data-target="page-analysis">Phân tích</a>
             </nav>
         </div>
@@ -207,13 +107,12 @@
 
     <!-- Main Content Area -->
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-
+        
         <!-- PAGE 1: KẾ HOẠCH GIẢNG DẠY -->
         <div id="page-home" class="page active">
-            <!-- Intro Section -->
-            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-12 ring-1 ring-slate-900/5 text-center">
-                <h3 class="text-sm font-semibold text-indigo-600 tracking-wider uppercase">Kế hoạch dạy học của Tổ
-                    chuyên môn</h3>
+             <!-- Intro Section -->
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-12 ring-1 ring-slate-900/5 text-center searchable-content">
+                <h3 class="text-sm font-semibold text-indigo-600 tracking-wider uppercase">Kế hoạch dạy học của Tổ chuyên môn</h3>
                 <h2 class="text-3xl font-extrabold text-slate-800 mt-2">NHÓM 5</h2>
                 <p class="text-lg text-slate-600 mt-1">PHÂN PHỐI CHƯƠNG TRÌNH HỌC KỲ I - TOÁN 10</p>
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -240,64 +139,44 @@
 
         <!-- PAGE 2: PHÂN TÍCH & SO SÁNH -->
         <div id="page-analysis" class="page">
-            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-10 ring-1 ring-slate-900/5 searchable-content">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Phân tích & So sánh các Kế hoạch Dạy học
-                </h2>
-                <p class="text-center text-gray-600 max-w-3xl mx-auto">Nội dung dưới đây trình bày các phân tích chi
-                    tiết về điểm giống, khác và ưu, nhược điểm của các phương án phân phối chương trình, tập trung phản
-                    biện kế hoạch của Nhóm 6.</p>
+             <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-10 ring-1 ring-slate-900/5 searchable-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Phân tích & So sánh các Kế hoạch Dạy học</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto">Nội dung dưới đây trình bày các phân tích chi tiết về điểm giống, khác và ưu, nhược điểm của các phương án phân phối chương trình, tập trung phản biện kế hoạch của Nhóm 6.</p>
             </div>
 
-            <!-- Group 6 Critique Section -->
+             <!-- Group 6 Critique Section -->
             <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-10 ring-1 ring-slate-900/5 searchable-content">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i
-                        class="fas fa-magnifying-glass-chart mr-3 text-red-500"></i>Phân tích Sâu & Phản biện Kế hoạch
-                    Nhóm 6</h3>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fas fa-magnifying-glass-chart mr-3 text-red-500"></i>Phân tích Sâu & Phản biện Kế hoạch Nhóm 6</h3>
                 <div class="space-y-6">
                     <!-- Weakness 1 -->
                     <div class="flex items-start space-x-4">
                         <i class="fas fa-exclamation-triangle text-2xl text-red-500 mt-1"></i>
                         <div>
-                            <h4 class="font-bold text-lg text-slate-800">Nhược điểm 1: Phân mảnh và làm gián đoạn dòng
-                                chảy kiến thức</h4>
-                            <p class="text-slate-600 mt-1">Mặc dù theo cấu trúc tuần tự, kế hoạch của Nhóm 6 vẫn có sự
-                                ngắt quãng thiếu hợp lý, làm giảm tính hệ thống và gây khó khăn cho học sinh trong việc
-                                xây dựng kiến thức liền mạch.</p>
+                            <h4 class="font-bold text-lg text-slate-800">Nhược điểm 1: Phân mảnh và làm gián đoạn dòng chảy kiến thức</h4>
+                            <p class="text-slate-600 mt-1">Mặc dù theo cấu trúc tuần tự, kế hoạch của Nhóm 6 vẫn có sự ngắt quãng thiếu hợp lý, làm giảm tính hệ thống và gây khó khăn cho học sinh trong việc xây dựng kiến thức liền mạch.</p>
                             <div class="mt-3 bg-slate-50 p-4 rounded-lg border border-slate-200">
                                 <p class="font-semibold text-sm">Ví dụ cụ thể:</p>
                                 <ul class="list-disc list-inside text-sm text-slate-600 mt-2 space-y-1">
-                                    <li><strong class="text-red-600">Tuần 3:</strong> Đang học "Tập hợp" (Chương I) lại
-                                        xen ngang 2 tiết "Giá trị lượng giác" (Chương IV).</li>
-                                    <li><strong class="text-red-600">Tuần 5:</strong> Đang ôn tập, kiểm tra Chương I lại
-                                        bắt đầu ngay "Hệ thức lượng" (Chương IV).</li>
+                                    <li><strong class="text-red-600">Tuần 3:</strong> Đang học "Tập hợp" (Chương I) lại xen ngang 2 tiết "Giá trị lượng giác" (Chương IV).</li>
+                                    <li><strong class="text-red-600">Tuần 5:</strong> Đang ôn tập, kiểm tra Chương I lại bắt đầu ngay "Hệ thức lượng" (Chương IV).</li>
                                 </ul>
-                                <p class="mt-2 text-sm text-slate-500"><em>=> Tác động: Học sinh phải chuyển đổi ngữ
-                                        cảnh đột ngột, khó tập trung và liên kết các bài học trong cùng một chương.</em>
-                                </p>
+                                <p class="mt-2 text-sm text-slate-500"><em>=> Tác động: Học sinh phải chuyển đổi ngữ cảnh đột ngột, khó tập trung và liên kết các bài học trong cùng một chương.</em></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Weakness 2 -->
+                     <!-- Weakness 2 -->
                     <div class="flex items-start space-x-4">
                         <i class="fas fa-layer-group text-2xl text-orange-500 mt-1"></i>
                         <div>
-                            <h4 class="font-bold text-lg text-slate-800">Nhược điểm 2: Phân bổ thời lượng chưa tối ưu,
-                                gây quá tải</h4>
-                            <p class="text-slate-600 mt-1">Kế hoạch dồn ép nhiều chủ đề quan trọng hoặc phức tạp vào một
-                                khoảng thời gian ngắn, trong khi các chủ đề khác lại được dàn trải không cần thiết.</p>
+                            <h4 class="font-bold text-lg text-slate-800">Nhược điểm 2: Phân bổ thời lượng chưa tối ưu, gây quá tải</h4>
+                            <p class="text-slate-600 mt-1">Kế hoạch dồn ép nhiều chủ đề quan trọng hoặc phức tạp vào một khoảng thời gian ngắn, trong khi các chủ đề khác lại được dàn trải không cần thiết.</p>
                             <div class="mt-3 bg-slate-50 p-4 rounded-lg border border-slate-200">
                                 <p class="font-semibold text-sm">Ví dụ cụ thể:</p>
                                 <ul class="list-disc list-inside text-sm text-slate-600 mt-2 space-y-1">
-                                    <li><strong class="text-orange-600">Tuần 1:</strong> Dành tới 3 tiết cho bài "Mệnh
-                                        đề", có thể rút gọn để dành thời gian cho các phần khó hơn.</li>
-                                    <li><strong class="text-orange-600">Tuần 11:</strong> Dồn nén 3 nội dung lớn là
-                                        "Vecto (định nghĩa)", "Hàm số bậc hai" và "Ứng dụng hàm số bậc hai" vào chung 1
-                                        tuần. Đây là các khái niệm mới và khó, cần nhiều thời gian hơn để giảng dạy và
-                                        luyện tập.</li>
+                                    <li><strong class="text-orange-600">Tuần 1:</strong> Dành tới 3 tiết cho bài "Mệnh đề", có thể rút gọn để dành thời gian cho các phần khó hơn.</li>
+                                    <li><strong class="text-orange-600">Tuần 11:</strong> Dồn nén 3 nội dung lớn là "Vecto (định nghĩa)", "Hàm số bậc hai" và "Ứng dụng hàm số bậc hai" vào chung 1 tuần. Đây là các khái niệm mới và khó, cần nhiều thời gian hơn để giảng dạy và luyện tập.</li>
                                 </ul>
-                                <p class="mt-2 text-sm text-slate-500"><em>=> Tác động: Giáo viên không đủ thời gian tổ
-                                        chức hoạt động khám phá, học sinh khó nắm vững kiến thức, dẫn đến học vẹt.</em>
-                                </p>
+                                <p class="mt-2 text-sm text-slate-500"><em>=> Tác động: Giáo viên không đủ thời gian tổ chức hoạt động khám phá, học sinh khó nắm vững kiến thức, dẫn đến học vẹt.</em></p>
                             </div>
                         </div>
                     </div>
@@ -306,67 +185,42 @@
 
             <!-- Infographics Section -->
             <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-10 ring-1 ring-slate-900/5 searchable-content">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i
-                        class="fas fa-project-diagram mr-3 text-purple-500"></i>Minh họa Cấu trúc Phân phối Chương trình
-                </h3>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fas fa-project-diagram mr-3 text-purple-500"></i>Minh họa Cấu trúc Phân phối Chương trình</h3>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Sequential Model Infographic -->
+                     <!-- Sequential Model Infographic -->
                     <div>
                         <h4 class="font-bold text-center text-slate-700 mb-4">Mô hình Tuần tự (Nhóm 6 / SGK)</h4>
                         <div class="space-y-2">
-                            <div class="bg-slate-100 p-3 rounded-lg flex items-center space-x-3">
-                                <div
-                                    class="bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                                    1</div>
-                                <span class="font-medium text-slate-800">Chương I: Mệnh đề & Tập hợp</span>
-                            </div>
-                            <div class="flex justify-center"><i class="fas fa-arrow-down text-slate-400"></i></div>
-                            <div class="bg-slate-100 p-3 rounded-lg flex items-center space-x-3">
-                                <div
-                                    class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                                    2</div>
-                                <span class="font-medium text-slate-800">Chương II: BPT & Hệ BPT</span>
-                            </div>
-                            <div class="flex justify-center"><i class="fas fa-arrow-down text-slate-400"></i></div>
-                            <div class="bg-slate-100 p-3 rounded-lg flex items-center space-x-3">
-                                <div
-                                    class="bg-sky-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                                    3</div>
-                                <span class="font-medium text-slate-800">Chương III: Hàm số & Đồ thị</span>
-                            </div>
-                            <p class="text-center text-sm text-slate-500 mt-2">Dạy dứt điểm từng khối kiến thức.</p>
+                             <div class="bg-slate-100 p-3 rounded-lg flex items-center space-x-3">
+                                 <div class="bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                                 <span class="font-medium text-slate-800">Chương I: Mệnh đề & Tập hợp</span>
+                             </div>
+                              <div class="flex justify-center"><i class="fas fa-arrow-down text-slate-400"></i></div>
+                             <div class="bg-slate-100 p-3 rounded-lg flex items-center space-x-3">
+                                 <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                                 <span class="font-medium text-slate-800">Chương II: BPT & Hệ BPT</span>
+                             </div>
+                             <div class="flex justify-center"><i class="fas fa-arrow-down text-slate-400"></i></div>
+                             <div class="bg-slate-100 p-3 rounded-lg flex items-center space-x-3">
+                                 <div class="bg-sky-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                                 <span class="font-medium text-slate-800">Chương III: Hàm số & Đồ thị</span>
+                             </div>
+                             <p class="text-center text-sm text-slate-500 mt-2">Dạy dứt điểm từng khối kiến thức.</p>
                         </div>
                     </div>
                     <!-- Spiral Model Infographic -->
                     <div>
-                        <h4 class="font-bold text-center text-slate-700 mb-4">Mô hình Xoắn ốc (Nhóm 5)</h4>
-                        <svg width="100%" height="200" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 10 30 Q 80 0, 150 30 T 290 30" stroke="#818cf8" fill="none" stroke-width="2"
-                                stroke-dasharray="4" />
-                            <path d="M 10 90 Q 80 120, 150 90 T 290 90" stroke="#a78bfa" fill="none" stroke-width="2"
-                                stroke-dasharray="4" />
-                            <g>
-                                <circle cx="40" cy="23" r="3" fill="#818cf8" /><text x="50" y="28" font-size="8"
-                                    fill="#4338ca" font-weight="600">Mệnh đề</text>
-                            </g>
-                            <g>
-                                <circle cx="70" cy="97" r="3" fill="#a78bfa" /><text x="80" y="102" font-size="8"
-                                    fill="#7e22ce" font-weight="600">Lượng giác</text>
-                            </g>
-                            <g>
-                                <circle cx="120" cy="18" r="3" fill="#818cf8" /><text x="130" y="23" font-size="8"
-                                    fill="#4338ca" font-weight="600">Tập hợp</text>
-                            </g>
-                            <g>
-                                <circle cx="180" cy="102" r="3" fill="#a78bfa" /><text x="190" y="107" font-size="8"
-                                    fill="#7e22ce" font-weight="600">Giải tam giác</text>
-                            </g>
-                            <g>
-                                <circle cx="240" cy="23" r="3" fill="#818cf8" /><text x="250" y="28" font-size="8"
-                                    fill="#4338ca" font-weight="600">BPT bậc nhất</text>
-                            </g>
+                         <h4 class="font-bold text-center text-slate-700 mb-4">Mô hình Xoắn ốc (Nhóm 5)</h4>
+                         <svg width="100%" height="200" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 10 30 Q 80 0, 150 30 T 290 30" stroke="#818cf8" fill="none" stroke-width="2" stroke-dasharray="4"/>
+                            <path d="M 10 90 Q 80 120, 150 90 T 290 90" stroke="#10b981" fill="none" stroke-width="2" stroke-dasharray="4"/>
+                            <g><circle cx="40" cy="23" r="3" fill="#818cf8"/><text x="50" y="28" font-size="8" fill="#4338ca" font-weight="600">Mệnh đề</text></g>
+                            <g><circle cx="70" cy="97" r="3" fill="#10b981"/><text x="80" y="102" font-size="8" fill="#047857" font-weight="600">Lượng giác</text></g>
+                             <g><circle cx="120" cy="18" r="3" fill="#818cf8"/><text x="130" y="23" font-size="8" fill="#4338ca" font-weight="600">Tập hợp</text></g>
+                             <g><circle cx="180" cy="102" r="3" fill="#10b981"/><text x="190" y="107" font-size="8" fill="#047857" font-weight="600">Giải tam giác</text></g>
+                             <g><circle cx="240" cy="23" r="3" fill="#818cf8"/><text x="250" y="28" font-size="8" fill="#4338ca" font-weight="600">BPT bậc nhất</text></g>
                             <text x="10" y="10" font-size="9" font-weight="bold" fill="#4f46e5">Đại số</text>
-                            <text x="10" y="80" font-size="9" font-weight="bold" fill="#7c3aed">Hình học</text>
+                            <text x="10" y="80" font-size="9" font-weight="bold" fill="#059669">Hình học</text>
                         </svg>
                         <p class="text-center text-sm text-slate-500">Các chủ đề xen kẽ nhau theo tuần.</p>
                     </div>
@@ -375,52 +229,52 @@
         </div>
 
     </main>
+    
+<script>
+    // --- DATA ---
+    const curriculumData = [
+        { week: 1, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Mệnh đề", periods: 1, objective: "Thiết lập và phát biểu được các mệnh đề toán học, bao gồm: Mệnh đề phủ định, mệnh đề đảo, mệnh đề tương đương.", content: { link: "Học sinh đã sử dụng logic suy luận cơ bản trong chứng minh hình học ở cấp THCS.", new: "Formal hóa khái niệm mệnh đề. Giới thiệu các phép toán logic cơ bản: mệnh đề phủ định, mệnh đề đảo, mệnh đề tương đương. Luyện tập phát biểu và nhận diện."}},{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Mệnh đề", periods: 1, objective: "Thiết lập và phát biểu được mệnh đề có chứa kí hiệu ∀, ∃, điều kiện cần, điều kiện đủ, điều kiện cần và đủ.", content: { link: null, new: "Giới thiệu các kí hiệu lượng từ hóa ∀, ∃. Phân biệt và vận dụng khái niệm 'điều kiện cần', 'điều kiện đủ', 'điều kiện cần và đủ' trong các định lí." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giá trị lượng giác của một góc từ 0° đến 180°", periods: 1, objective: "Nhận biết được giá trị lượng giác của 1 góc từ 0° đến 180°. Tính được GTLG (đúng hoặc gần đúng) của 1 góc từ 0° đến 180° bằng máy tính cầm tay.", content: { link: "Học sinh đã biết các tỉ số lượng giác (sin, cos, tan) của góc nhọn trong tam giác vuông.", new: "Mở rộng khái niệm GTLG cho góc tù (0°-180°) thông qua nửa đường tròn đơn vị. Hướng dẫn sử dụng máy tính cầm tay để tính GTLG." }}]},
+        { week: 2, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Mệnh đề", periods: 1, objective: "Xác định tính đúng/ sai của mệnh đề toán học trong những trường hợp đơn giản.", content: { link: null, new: "Rèn luyện kỹ năng xác định chân trị của một mệnh đề. Học phương pháp chứng minh mệnh đề sai bằng cách chỉ ra một phản ví dụ." }},{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và phép toán trên tập hợp", periods: 1, objective: "Nhận biết các khái niệm cơ bản về tập hợp (tập con, 2 tập hợp bằng nhau, tập rỗng) và biết sử dụng các kí hiệu.", content: { link: "Đã làm quen với các tập hợp số N, Z, Q.", new: "Formal hóa khái niệm tập hợp, phần tử. Giới thiệu các khái niệm tập con, tập rỗng, hai tập hợp bằng nhau và các kí hiệu ⊂, =, ∅." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giá trị lượng giác của một góc từ 0° đến 180°", periods: 1, objective: "Giải thích được hệ thức liên hệ giữa giá trị lượng giác của các góc phụ nhau, bù nhau.", content: { link: "Biết quan hệ GTLG của hai góc phụ nhau.", new: "Xây dựng và chứng minh công thức liên hệ GTLG của hai góc bù nhau (180° - α). Luyện tập áp dụng." }}]},
+        { week: 3, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Thực hiện được phép toán trên tập hợp (hợp, giao của 2 tập hợp).", content: { link: null, new: "Định nghĩa và thực hành phép toán hợp và giao của hai tập hợp thông qua các ví dụ cụ thể về tập hợp số và tập hợp các đối tượng." }},{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Thực hiện được phép toán trên tập hợp (hiệu của 2 tập hợp, phần bù của 1 tập con).", content: { link: null, new: "Định nghĩa và thực hành phép toán hiệu và phần bù. Phân biệt rõ ràng giữa hiệu (A \\ B) và phần bù (C<sub>E</sub>A)." }},{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Biết sử dụng biểu đồ Ven để biểu diễn phép toán trên các tập hợp trong những trường hợp cụ thể.", content: { link: null, new: "Giới thiệu và hướng dẫn sử dụng biểu đồ Ven như một công cụ trực quan để minh họa và kiểm tra kết quả các phép toán trên tập hợp." }}]},
+        { week: 4, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Giải quyết được 1 số vấn đề thực tiễn thường gặp với phép toán trên tập hợp (Ví dụ: Những bài toán liên quan đến đếm số phần tử của hợp các tập hợp,...).", content: { link: null, new: "Vận dụng công thức tính số phần tử của hợp hai hoặc ba tập hợp để giải các bài toán thực tế (ví dụ: bài toán thống kê số học sinh trong lớp học,...)." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Hệ thức lượng cơ bản trong tam giác. Giải tam giác", periods: 2, objective: "Giải thích được các hệ thức lượng cơ bản: định lí sin, định lí cosin,...", content: { link: "Định lí Pitago là trường hợp đặc biệt của định lí côsin.", new: "Giới thiệu và chứng minh Định lí côsin và Định lí sin, nhấn mạnh đây là các công cụ để làm việc với tam giác bất kỳ, không chỉ tam giác vuông." }}]},
+        { week: 5, topics: [{ chapter: "Chương II: BPT & Hệ BPT bậc nhất hai ẩn", title: "Bất phương trình, hệ BPT bậc nhất hai ẩn", periods: 1, objective: "Nhận biết được bất phương trình và hệ bất phương trình bậc nhất hai ẩn.", content: { link: "Đã giải BPT bậc nhất một ẩn.", new: "Giới thiệu khái niệm BPT bậc nhất hai ẩn. Phân biệt nghiệm của BPT hai ẩn là một cặp số (x; y) chứ không phải một số." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giải tam giác", periods: 1, objective: "Mô tả được cách giải tam giác. Giải thích được các hệ thức lượng giác cơ bản trong tam giác: công thức tính diện tích tam giác.", content: { link: null, new: "Hệ thống hóa các trường hợp giải tam giác (cạnh-góc-cạnh, góc-cạnh-góc,...). Giới thiệu các công thức tính diện tích tam giác (S = ½ ab sinC, công thức Heron)." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giải tam giác", periods: 1, objective: "Vận dụng được vào việc giải một số bài toán có nội dung thực tiễn.", content: { link: null, new: "Hướng dẫn học sinh mô hình hóa bài toán thực tế (đo chiều cao, khoảng cách) thành bài toán 'giải tam giác' và áp dụng các hệ thức lượng để tìm lời giải." }}]},
+        { week: 6, topics: [{ chapter: "Chương II: BPT & Hệ BPT bậc nhất hai ẩn", title: "Bất phương trình, hệ BPT bậc nhất hai ẩn", periods: 2, objective: "Biểu diễn được miền nghiệm của bất phương trình và hệ bất phương trình bậc nhất hai ẩn trên mặt phẳng tọa độ.", content: { link: "Biết biểu diễn điểm, đường thẳng trên mặt phẳng tọa độ Oxy.", new: "Hướng dẫn các bước xác định và biểu diễn miền nghiệm của một BPT (vẽ đường thẳng, xét điểm). Mở rộng ra cách biểu diễn miền nghiệm của hệ BPT (phần giao của các miền nghiệm)." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Vecto (các định nghĩa)", periods: 1, objective: "Nhận biết được khái niệm vectơ, vectơ cùng phương, vectơ cùng hướng.", content: { link: "Hình học THCS chủ yếu là hình học Euclide (điểm, đường thẳng, độ dài).", new: "Vectơ là một khái niệm hoàn toàn mới. Giới thiệu định nghĩa vectơ là một đoạn thẳng có hướng, các khái niệm giá, phương, hướng của vectơ." }}]},
+        { week: 7, topics: [{ chapter: "Chương II: BPT & Hệ BPT bậc nhất hai ẩn", title: "Bất phương trình, hệ BPT bậc nhất hai ẩn", periods: 1, objective: "Vận dụng được kiến thức về BPT/Hệ BPT vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Giới thiệu bài toán tối ưu hóa tuyến tính. Hướng dẫn các bước: đặt ẩn, lập hệ BPT, xác định miền nghiệm (miền khả thi), tìm GTLN/GTNN của hàm mục tiêu tại các đỉnh." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Vecto (các định nghĩa)", periods: 1, objective: "Nhận biết được các vecto bằng nhau, vecto không. Biểu thị được 1 số đại lượng trong thực tiễn bằng vecto.", content: { link: null, new: "Định nghĩa hai vectơ bằng nhau (cùng hướng, cùng độ dài). Giới thiệu vectơ-không. Hướng dẫn biểu diễn các đại lượng vật lý (lực, vận tốc) bằng vectơ." }},{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập", periods: 1, objective: "Hệ thống hóa kiến thức các chủ đề Đại số đã học.", content: { link: null, new: "Hệ thống hóa kiến thức các chủ đề: Mệnh đề, Tập hợp, Bất phương trình & Hệ BPT bậc nhất hai ẩn. Luyện tập các dạng bài tập tổng hợp." }}]},
+        { week: 8, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Khái niệm cơ bản về hàm số và đồ thị", periods: 2, objective: "Nhận biết được những mô hình thực tế dẫn đến khái niệm hàm số. Mô tả được các khái niệm cơ bản về hàm số.", content: { link: "Đã làm quen hàm số bậc nhất và hàm y=ax².", new: "Formal hóa định nghĩa hàm số, giới thiệu các khái niệm tập xác định, tập giá trị một cách chính xác." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Vecto (các định nghĩa)", periods: 1, objective: "Sử dụng được vectơ để giải thích một số hiện tượng có liên quan đến Vật lí.", content: { link: null, new: "Vận dụng các định nghĩa vectơ để mô tả các bài toán thực tiễn đơn giản liên quan đến lực, chuyển động, tổng hợp lực,..." }}]},
+        { week: 9, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Khái niệm cơ bản về hàm số và đồ thị hàm số", periods: 1, objective: "Mô tả được các đặc trưng hình học của đồ thị hàm số đồng biến, hàm số nghịch biến.", content: { link: null, new: "Xây dựng khái niệm sự biến thiên của hàm số. Hướng dẫn nhận biết khoảng đồng biến/nghịch biến của hàm số thông qua đồ thị ('đi lên' hoặc 'đi xuống')." }},{ chapter: "Chương III: Hàm số & Đồ thị", title: "Khái niệm cơ bản về hàm số và đồ thị hàm số", periods: 1, objective: "Vận dụng được các kiến thức của hàm số vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Hướng dẫn học sinh xây dựng các hàm số (thường là bậc nhất) từ các mô hình thực tế (tính cước phí điện thoại, taxi,...) và dùng hàm số để phân tích, trả lời câu hỏi." }},{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập", periods: 1, objective: "Hệ thống hóa kiến thức các chủ đề Hình học đã học.", content: { link: null, new: "Hệ thống hóa kiến thức các chủ đề: Hệ thức lượng trong tam giác, giải tam giác, các định nghĩa về vectơ. Luyện tập các dạng bài tập tổng hợp." }}]},
+        { week: 10, topics: [{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập giữa kỳ", periods: 1, objective: "Ôn tập kiến thức tổng hợp của chương I, II và các phần hình học đã học.", content: { link: null, new: "Ôn tập tổng hợp toàn bộ kiến thức đã học từ đầu kỳ, bao gồm cả Đại số và Hình học, chuẩn bị cho bài kiểm tra giữa kỳ." }},{ chapter: "Ôn tập & Kiểm tra", title: "Kiểm tra giữa kì I", periods: 2, objective: "Đánh giá năng lực của học sinh qua các chủ đề đã học.", content: { link: null, new: "Thực hiện bài kiểm tra đánh giá năng lực của học sinh. Cấu trúc đề bao gồm các câu hỏi kiểm tra kiến thức nền và khả năng vận dụng trong các chủ đề đã học." }}]},
+        { week: 11, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Hàm số bậc hai, đồ thị và ứng dụng", periods: 1, objective: "Thiết lập được bảng giá trị của hàm số bậc hai. Vẽ được Parabol là đồ thị hàm số bậc hai.", content: { link: "Đã vẽ đồ thị hàm số y = ax².", new: "Hướng dẫn vẽ đồ thị hàm bậc hai dạng đầy đủ y=ax²+bx+c thông qua việc xác định đỉnh, trục đối xứng và các điểm đặc biệt." }},{ chapter: "Chương III: Hàm số & Đồ thị", title: "Hàm số bậc hai, đồ thị và ứng dụng", periods: 1, objective: "Nhận biết được các tính chất cơ bản của Parabol như đỉnh, trục đối xứng. Nhận biết và giải thích được các tính chất của hàm số bậc hai thông qua đồ thị.", content: { link: null, new: "Phân tích sâu mối quan hệ giữa các hệ số a, b, c với hình dạng và vị trí của Parabol. Sử dụng đồ thị để xác định sự biến thiên, GTLN/GTNN." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 1, objective: "Thực hiện được phép toán tổng và hiệu của hai vectơ.", content: { link: null, new: "Giới thiệu định nghĩa tổng, hiệu hai vectơ. Xây dựng các quy tắc hình học (quy tắc ba điểm, quy tắc hình bình hành) để thực hiện các phép toán." }}]},
+        { week: 12, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Hàm số bậc hai, đồ thị và ứng dụng", periods: 1, objective: "Vận dụng được kiến thức về hàm số bậc hai và đồ thị vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Áp dụng các tính chất của Parabol (đặc biệt là tọa độ đỉnh) để giải các bài toán tối ưu hóa thực tế (tìm lợi nhuận lớn nhất, xác định độ cao của cổng Parabol,...)." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 2, objective: "Thực hiện được phép toán trên vectơ (tích của 1 số và 1 vectơ). Mô tả được những tính chất hình học bằng vectơ.", content: { link: null, new: "Định nghĩa phép nhân vectơ với một số. Vận dụng để chứng minh các tính chất hình học quen thuộc (trung điểm, trọng tâm, 3 điểm thẳng hàng) bằng ngôn ngữ vectơ." }}]},
+        { week: 13, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Thực hành trong phòng máy tính với phần mềm toán học", periods: 1, objective: "Sử dụng được phần mềm để vẽ đồ thị hàm số bậc hai, sử dụng đồ thị để tạo các hình ảnh hoa văn, hình khối.", content: { link: "Kỹ năng tin học cơ bản.", new: "Giới thiệu phần mềm Geogebra. Hướng dẫn các thao tác cơ bản để nhập hàm số, vẽ đồ thị. Khuyến khích học sinh khám phá, sáng tạo với phần mềm." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 2, objective: "Thực hiện được phép toán trên vectơ (tích vô hướng của hai vectơ).", content: { link: null, new: "Định nghĩa tích vô hướng và các tính chất. Nhấn mạnh ý nghĩa hình học (liên quan đến góc và hình chiếu). Hướng dẫn tính tích vô hướng trong các trường hợp cụ thể." }}]},
+        { week: 14, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Dấu của tam thức bậc hai. BPT bậc hai một ẩn", periods: 2, objective: "Giải thích được định lý về dấu của tam thức bậc hai từ việc quan sát đồ thị của hàm bậc hai. Giải được bất phương trình bậc hai.", content: { link: "Biết giải phương trình bậc hai.", new: "Đây là công cụ đại số mới và mạnh. Xây dựng định lý 'trong trái, ngoài cùng' dựa trên vị trí của Parabol so với trục Ox. Hướng dẫn các bước lập bảng xét dấu để giải BPT." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 1, objective: "Mô tả được những tính chất hình học (ba điểm thẳng hàng, trung điểm của đoạn thẳng,...) bằng vectơ.", content: { link: null, new: "Luyện tập nâng cao, sử dụng kết hợp các phép toán vectơ để giải quyết các bài toán chứng minh hình học phức tạp hơn." }}]},
+        { week: 15, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Dấu của tam thức bậc hai. BPT bậc hai một ẩn", periods: 2, objective: "Vận dụng được bất phương trình bậc hai một ẩn vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Hướng dẫn các bước mô hình hóa bài toán thực tế (lợi nhuận, chi phí,...) thành một bất phương trình bậc hai và giải để tìm ra kết luận." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 1, objective: "Sử dụng được các phép toán trên vectơ để giải thích một số hiện tượng có liên quan đến Vật lí.", content: { link: null, new: "Vận dụng tích vô hướng để tính công của một lực. Vận dụng tổng, hiệu vectơ để giải các bài toán tổng hợp vận tốc." }}]},
+        { week: 16, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Phương trình quy về phương trình bậc hai", periods: 1, objective: "Giải phương trình căn thức có dạng √f(x) = √g(x); √f(x) = g(x).", content: { link: null, new: "Hướng dẫn phương pháp giải các phương trình vô tỉ bằng cách bình phương hai vế, kết hợp với việc đặt điều kiện để loại nghiệm ngoại lai." }},{ chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 2, objective: "Vận dụng được kiến thức về vector để giải một số bài toán về hình học và một số bài toán liên quan đến thực tiễn.", content: { link: null, new: "Tổ chức các hoạt động luyện tập tổng hợp, giúp học sinh linh hoạt lựa chọn và phối hợp các công cụ vectơ để giải quyết một vấn đề." }}]},
+        { week: 17, topics: [{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập cuối kỳ I", periods: 2, objective: "Hệ thống hóa lại toàn bộ kiến thức đã học trong học kỳ.", content: { link: null, new: "Hệ thống hóa lại toàn bộ kiến thức đã học trong học kỳ. Rèn luyện kỹ năng giải các bài toán tổng hợp, chuẩn bị cho kiểm tra cuối kỳ." }},{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập cuối kỳ I", periods: 1, objective: "Luyện tập các dạng bài tổng hợp.", content: { link: null, new: "Tổ chức các hoạt động luyện tập chuyên sâu theo từng chủ đề hoặc các dạng bài tổng hợp nâng cao để học sinh làm quen với cấu trúc đề thi." }}]},
+        { week: 18, topics: [{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập cuối kỳ I", periods: 1, objective: "Giải đáp thắc mắc và củng cố kiến thức.", content: { link: null, new: "Tổ chức buổi giải đáp các câu hỏi, vướng mắc của học sinh. Củng cố lại các kiến thức trọng tâm, các lỗi sai thường gặp." }},{ chapter: "Ôn tập & Kiểm tra", title: "Kiểm tra cuối kỳ I", periods: 2, objective: "Đánh giá toàn diện năng lực của học sinh.", content: { link: null, new: "Thực hiện bài kiểm tra tổng kết, đánh giá toàn diện năng lực của học sinh sau khi kết thúc học kỳ I." }}]}
+    ];
 
-    <script>
-        // --- DATA ---
-        const curriculumData = [
-            { week: 1, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Mệnh đề", periods: 1, objective: "Thiết lập và phát biểu được các mệnh đề toán học, bao gồm: Mệnh đề phủ định, mệnh đề đảo, mệnh đề tương đương.", content: { link: "Học sinh đã sử dụng logic suy luận cơ bản trong chứng minh hình học ở cấp THCS.", new: "Formal hóa khái niệm mệnh đề. Giới thiệu các phép toán logic cơ bản: mệnh đề phủ định, mệnh đề đảo, mệnh đề tương đương. Luyện tập phát biểu và nhận diện." } }, { chapter: "Chương I: Mệnh đề & Tập hợp", title: "Mệnh đề", periods: 1, objective: "Thiết lập và phát biểu được mệnh đề có chứa kí hiệu ∀, ∃, điều kiện cần, điều kiện đủ, điều kiện cần và đủ.", content: { link: null, new: "Giới thiệu các kí hiệu lượng từ hóa ∀, ∃. Phân biệt và vận dụng khái niệm 'điều kiện cần', 'điều kiện đủ', 'điều kiện cần và đủ' trong các định lí." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giá trị lượng giác của một góc từ 0° đến 180°", periods: 1, objective: "Nhận biết được giá trị lượng giác của 1 góc từ 0° đến 180°. Tính được GTLG (đúng hoặc gần đúng) của 1 góc từ 0° đến 180° bằng máy tính cầm tay.", content: { link: "Học sinh đã biết các tỉ số lượng giác (sin, cos, tan) của góc nhọn trong tam giác vuông.", new: "Mở rộng khái niệm GTLG cho góc tù (0°-180°) thông qua nửa đường tròn đơn vị. Hướng dẫn sử dụng máy tính cầm tay để tính GTLG." } }] },
-            { week: 2, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Mệnh đề", periods: 1, objective: "Xác định tính đúng/ sai của mệnh đề toán học trong những trường hợp đơn giản.", content: { link: null, new: "Rèn luyện kỹ năng xác định chân trị của một mệnh đề. Học phương pháp chứng minh mệnh đề sai bằng cách chỉ ra một phản ví dụ." } }, { chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và phép toán trên tập hợp", periods: 1, objective: "Nhận biết các khái niệm cơ bản về tập hợp (tập con, 2 tập hợp bằng nhau, tập rỗng) và biết sử dụng các kí hiệu.", content: { link: "Đã làm quen với các tập hợp số N, Z, Q.", new: "Formal hóa khái niệm tập hợp, phần tử. Giới thiệu các khái niệm tập con, tập rỗng, hai tập hợp bằng nhau và các kí hiệu ⊂, =, ∅." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giá trị lượng giác của một góc từ 0° đến 180°", periods: 1, objective: "Giải thích được hệ thức liên hệ giữa giá trị lượng giác của các góc phụ nhau, bù nhau.", content: { link: "Biết quan hệ GTLG của hai góc phụ nhau.", new: "Xây dựng và chứng minh công thức liên hệ GTLG của hai góc bù nhau (180° - α). Luyện tập áp dụng." } }] },
-            { week: 3, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Thực hiện được phép toán trên tập hợp (hợp, giao của 2 tập hợp).", content: { link: null, new: "Định nghĩa và thực hành phép toán hợp và giao của hai tập hợp thông qua các ví dụ cụ thể về tập hợp số và tập hợp các đối tượng." } }, { chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Thực hiện được phép toán trên tập hợp (hiệu của 2 tập hợp, phần bù của 1 tập con).", content: { link: null, new: "Định nghĩa và thực hành phép toán hiệu và phần bù. Phân biệt rõ ràng giữa hiệu (A \\ B) và phần bù (C<sub>E</sub>A)." } }, { chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Biết sử dụng biểu đồ Ven để biểu diễn phép toán trên các tập hợp trong những trường hợp cụ thể.", content: { link: null, new: "Giới thiệu và hướng dẫn sử dụng biểu đồ Ven như một công cụ trực quan để minh họa và kiểm tra kết quả các phép toán trên tập hợp." } }] },
-            { week: 4, topics: [{ chapter: "Chương I: Mệnh đề & Tập hợp", title: "Tập hợp và các phép toán trên tập hợp", periods: 1, objective: "Giải quyết được 1 số vấn đề thực tiễn thường gặp với phép toán trên tập hợp (Ví dụ: Những bài toán liên quan đến đếm số phần tử của hợp các tập hợp,...).", content: { link: null, new: "Vận dụng công thức tính số phần tử của hợp hai hoặc ba tập hợp để giải các bài toán thực tế (ví dụ: bài toán thống kê số học sinh trong lớp học,...)." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Hệ thức lượng cơ bản trong tam giác. Giải tam giác", periods: 2, objective: "Giải thích được các hệ thức lượng cơ bản: định lí sin, định lí cosin,...", content: { link: "Định lí Pitago là trường hợp đặc biệt của định lí côsin.", new: "Giới thiệu và chứng minh Định lí côsin và Định lí sin, nhấn mạnh đây là các công cụ để làm việc với tam giác bất kỳ, không chỉ tam giác vuông." } }] },
-            { week: 5, topics: [{ chapter: "Chương II: BPT & Hệ BPT bậc nhất hai ẩn", title: "Bất phương trình, hệ BPT bậc nhất hai ẩn", periods: 1, objective: "Nhận biết được bất phương trình và hệ bất phương trình bậc nhất hai ẩn.", content: { link: "Đã giải BPT bậc nhất một ẩn.", new: "Giới thiệu khái niệm BPT bậc nhất hai ẩn. Phân biệt nghiệm của BPT hai ẩn là một cặp số (x; y) chứ không phải một số." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giải tam giác", periods: 1, objective: "Mô tả được cách giải tam giác. Giải thích được các hệ thức lượng giác cơ bản trong tam giác: công thức tính diện tích tam giác.", content: { link: null, new: "Hệ thống hóa các trường hợp giải tam giác (cạnh-góc-cạnh, góc-cạnh-góc,...). Giới thiệu các công thức tính diện tích tam giác (S = ½ ab sinC, công thức Heron)." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Giải tam giác", periods: 1, objective: "Vận dụng được vào việc giải một số bài toán có nội dung thực tiễn.", content: { link: null, new: "Hướng dẫn học sinh mô hình hóa bài toán thực tế (đo chiều cao, khoảng cách) thành bài toán 'giải tam giác' và áp dụng các hệ thức lượng để tìm lời giải." } }] },
-            { week: 6, topics: [{ chapter: "Chương II: BPT & Hệ BPT bậc nhất hai ẩn", title: "Bất phương trình, hệ BPT bậc nhất hai ẩn", periods: 2, objective: "Biểu diễn được miền nghiệm của bất phương trình và hệ bất phương trình bậc nhất hai ẩn trên mặt phẳng tọa độ.", content: { link: "Biết biểu diễn điểm, đường thẳng trên mặt phẳng tọa độ Oxy.", new: "Hướng dẫn các bước xác định và biểu diễn miền nghiệm của một BPT (vẽ đường thẳng, xét điểm). Mở rộng ra cách biểu diễn miền nghiệm của hệ BPT (phần giao của các miền nghiệm)." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Vecto (các định nghĩa)", periods: 1, objective: "Nhận biết được khái niệm vectơ, vectơ cùng phương, vectơ cùng hướng.", content: { link: "Hình học THCS chủ yếu là hình học Euclide (điểm, đường thẳng, độ dài).", new: "Vectơ là một khái niệm hoàn toàn mới. Giới thiệu định nghĩa vectơ là một đoạn thẳng có hướng, các khái niệm giá, phương, hướng của vectơ." } }] },
-            { week: 7, topics: [{ chapter: "Chương II: BPT & Hệ BPT bậc nhất hai ẩn", title: "Bất phương trình, hệ BPT bậc nhất hai ẩn", periods: 1, objective: "Vận dụng được kiến thức về BPT/Hệ BPT vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Giới thiệu bài toán tối ưu hóa tuyến tính. Hướng dẫn các bước: đặt ẩn, lập hệ BPT, xác định miền nghiệm (miền khả thi), tìm GTLN/GTNN của hàm mục tiêu tại các đỉnh." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Vecto (các định nghĩa)", periods: 1, objective: "Nhận biết được các vecto bằng nhau, vecto không. Biểu thị được 1 số đại lượng trong thực tiễn bằng vecto.", content: { link: null, new: "Định nghĩa hai vectơ bằng nhau (cùng hướng, cùng độ dài). Giới thiệu vectơ-không. Hướng dẫn biểu diễn các đại lượng vật lý (lực, vận tốc) bằng vectơ." } }, { chapter: "Ôn tập & Kiểm tra", title: "Ôn tập", periods: 1, objective: "Hệ thống hóa kiến thức các chủ đề Đại số đã học.", content: { link: null, new: "Hệ thống hóa kiến thức các chủ đề: Mệnh đề, Tập hợp, Bất phương trình & Hệ BPT bậc nhất hai ẩn. Luyện tập các dạng bài tập tổng hợp." } }] },
-            { week: 8, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Khái niệm cơ bản về hàm số và đồ thị", periods: 2, objective: "Nhận biết được những mô hình thực tế dẫn đến khái niệm hàm số. Mô tả được các khái niệm cơ bản về hàm số.", content: { link: "Đã làm quen hàm số bậc nhất và hàm y=ax².", new: "Formal hóa định nghĩa hàm số, giới thiệu các khái niệm tập xác định, tập giá trị một cách chính xác." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Vecto (các định nghĩa)", periods: 1, objective: "Sử dụng được vectơ để giải thích một số hiện tượng có liên quan đến Vật lí.", content: { link: null, new: "Vận dụng các định nghĩa vectơ để mô tả các bài toán thực tiễn đơn giản liên quan đến lực, chuyển động, tổng hợp lực,..." } }] },
-            { week: 9, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Khái niệm cơ bản về hàm số và đồ thị hàm số", periods: 1, objective: "Mô tả được các đặc trưng hình học của đồ thị hàm số đồng biến, hàm số nghịch biến.", content: { link: null, new: "Xây dựng khái niệm sự biến thiên của hàm số. Hướng dẫn nhận biết khoảng đồng biến/nghịch biến của hàm số thông qua đồ thị ('đi lên' hoặc 'đi xuống')." } }, { chapter: "Chương III: Hàm số & Đồ thị", title: "Khái niệm cơ bản về hàm số và đồ thị hàm số", periods: 1, objective: "Vận dụng được các kiến thức của hàm số vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Hướng dẫn học sinh xây dựng các hàm số (thường là bậc nhất) từ các mô hình thực tế (tính cước phí điện thoại, taxi,...) và dùng hàm số để phân tích, trả lời câu hỏi." } }, { chapter: "Ôn tập & Kiểm tra", title: "Ôn tập", periods: 1, objective: "Hệ thống hóa kiến thức các chủ đề Hình học đã học.", content: { link: null, new: "Hệ thống hóa kiến thức các chủ đề: Hệ thức lượng trong tam giác, giải tam giác, các định nghĩa về vectơ. Luyện tập các dạng bài tập tổng hợp." } }] },
-            { week: 10, topics: [{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập giữa kỳ", periods: 1, objective: "Ôn tập kiến thức tổng hợp của chương I, II và các phần hình học đã học.", content: { link: null, new: "Ôn tập tổng hợp toàn bộ kiến thức đã học từ đầu kỳ, bao gồm cả Đại số và Hình học, chuẩn bị cho bài kiểm tra giữa kỳ." } }, { chapter: "Ôn tập & Kiểm tra", title: "Kiểm tra giữa kì I", periods: 2, objective: "Đánh giá năng lực của học sinh qua các chủ đề đã học.", content: { link: null, new: "Thực hiện bài kiểm tra đánh giá năng lực của học sinh. Cấu trúc đề bao gồm các câu hỏi kiểm tra kiến thức nền và khả năng vận dụng trong các chủ đề đã học." } }] },
-            { week: 11, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Hàm số bậc hai, đồ thị và ứng dụng", periods: 1, objective: "Thiết lập được bảng giá trị của hàm số bậc hai. Vẽ được Parabol là đồ thị hàm số bậc hai.", content: { link: "Đã vẽ đồ thị hàm số y = ax².", new: "Hướng dẫn vẽ đồ thị hàm bậc hai dạng đầy đủ y=ax²+bx+c thông qua việc xác định đỉnh, trục đối xứng và các điểm đặc biệt." } }, { chapter: "Chương III: Hàm số & Đồ thị", title: "Hàm số bậc hai, đồ thị và ứng dụng", periods: 1, objective: "Nhận biết được các tính chất cơ bản của Parabol như đỉnh, trục đối xứng. Nhận biết và giải thích được các tính chất của hàm số bậc hai thông qua đồ thị.", content: { link: null, new: "Phân tích sâu mối quan hệ giữa các hệ số a, b, c với hình dạng và vị trí của Parabol. Sử dụng đồ thị để xác định sự biến thiên, GTLN/GTNN." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 1, objective: "Thực hiện được phép toán tổng và hiệu của hai vectơ.", content: { link: null, new: "Giới thiệu định nghĩa tổng, hiệu hai vectơ. Xây dựng các quy tắc hình học (quy tắc ba điểm, quy tắc hình bình hành) để thực hiện các phép toán." } }] },
-            { week: 12, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Hàm số bậc hai, đồ thị và ứng dụng", periods: 1, objective: "Vận dụng được kiến thức về hàm số bậc hai và đồ thị vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Áp dụng các tính chất của Parabol (đặc biệt là tọa độ đỉnh) để giải các bài toán tối ưu hóa thực tế (tìm lợi nhuận lớn nhất, xác định độ cao của cổng Parabol,...)." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 2, objective: "Thực hiện được phép toán trên vectơ (tích của 1 số và 1 vectơ). Mô tả được những tính chất hình học bằng vectơ.", content: { link: null, new: "Định nghĩa phép nhân vectơ với một số. Vận dụng để chứng minh các tính chất hình học quen thuộc (trung điểm, trọng tâm, 3 điểm thẳng hàng) bằng ngôn ngữ vectơ." } }] },
-            { week: 13, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Thực hành trong phòng máy tính với phần mềm toán học", periods: 1, objective: "Sử dụng được phần mềm để vẽ đồ thị hàm số bậc hai, sử dụng đồ thị để tạo các hình ảnh hoa văn, hình khối.", content: { link: "Kỹ năng tin học cơ bản.", new: "Giới thiệu phần mềm Geogebra. Hướng dẫn các thao tác cơ bản để nhập hàm số, vẽ đồ thị. Khuyến khích học sinh khám phá, sáng tạo với phần mềm." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 2, objective: "Thực hiện được phép toán trên vectơ (tích vô hướng của hai vectơ).", content: { link: null, new: "Định nghĩa tích vô hướng và các tính chất. Nhấn mạnh ý nghĩa hình học (liên quan đến góc và hình chiếu). Hướng dẫn tính tích vô hướng trong các trường hợp cụ thể." } }] },
-            { week: 14, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Dấu của tam thức bậc hai. BPT bậc hai một ẩn", periods: 2, objective: "Giải thích được định lý về dấu của tam thức bậc hai từ việc quan sát đồ thị của hàm bậc hai. Giải được bất phương trình bậc hai.", content: { link: "Biết giải phương trình bậc hai.", new: "Đây là công cụ đại số mới và mạnh. Xây dựng định lý 'trong trái, ngoài cùng' dựa trên vị trí của Parabol so với trục Ox. Hướng dẫn các bước lập bảng xét dấu để giải BPT." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 1, objective: "Mô tả được những tính chất hình học (ba điểm thẳng hàng, trung điểm của đoạn thẳng,...) bằng vectơ.", content: { link: null, new: "Luyện tập nâng cao, sử dụng kết hợp các phép toán vectơ để giải quyết các bài toán chứng minh hình học phức tạp hơn." } }] },
-            { week: 15, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Dấu của tam thức bậc hai. BPT bậc hai một ẩn", periods: 2, objective: "Vận dụng được bất phương trình bậc hai một ẩn vào giải quyết bài toán thực tiễn.", content: { link: null, new: "Hướng dẫn các bước mô hình hóa bài toán thực tế (lợi nhuận, chi phí,...) thành một bất phương trình bậc hai và giải để tìm ra kết luận." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 1, objective: "Sử dụng được các phép toán trên vectơ để giải thích một số hiện tượng có liên quan đến Vật lí.", content: { link: null, new: "Vận dụng tích vô hướng để tính công của một lực. Vận dụng tổng, hiệu vectơ để giải các bài toán tổng hợp vận tốc." } }] },
-            { week: 16, topics: [{ chapter: "Chương III: Hàm số & Đồ thị", title: "Phương trình quy về phương trình bậc hai", periods: 1, objective: "Giải phương trình căn thức có dạng √f(x) = √g(x); √f(x) = g(x).", content: { link: null, new: "Hướng dẫn phương pháp giải các phương trình vô tỉ bằng cách bình phương hai vế, kết hợp với việc đặt điều kiện để loại nghiệm ngoại lai." } }, { chapter: "Chương IV: Hệ thức lượng & Vectơ", title: "Phép toán trên vectơ và ứng dụng", periods: 2, objective: "Vận dụng được kiến thức về vector để giải một số bài toán về hình học và một số bài toán liên quan đến thực tiễn.", content: { link: null, new: "Tổ chức các hoạt động luyện tập tổng hợp, giúp học sinh linh hoạt lựa chọn và phối hợp các công cụ vectơ để giải quyết một vấn đề." } }] },
-            { week: 17, topics: [{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập cuối kỳ I", periods: 2, objective: "Hệ thống hóa lại toàn bộ kiến thức đã học trong học kỳ.", content: { link: null, new: "Hệ thống hóa lại toàn bộ kiến thức đã học trong học kỳ. Rèn luyện kỹ năng giải các bài toán tổng hợp, chuẩn bị cho kiểm tra cuối kỳ." } }, { chapter: "Ôn tập & Kiểm tra", title: "Ôn tập cuối kỳ I", periods: 1, objective: "Luyện tập các dạng bài tổng hợp.", content: { link: null, new: "Tổ chức các hoạt động luyện tập chuyên sâu theo từng chủ đề hoặc các dạng bài tổng hợp nâng cao để học sinh làm quen với cấu trúc đề thi." } }] },
-            { week: 18, topics: [{ chapter: "Ôn tập & Kiểm tra", title: "Ôn tập cuối kỳ I", periods: 1, objective: "Giải đáp thắc mắc và củng cố kiến thức.", content: { link: null, new: "Tổ chức buổi giải đáp các câu hỏi, vướng mắc của học sinh. Củng cố lại các kiến thức trọng tâm, các lỗi sai thường gặp." } }, { chapter: "Ôn tập & Kiểm tra", title: "Kiểm tra cuối kỳ I", periods: 2, objective: "Đánh giá toàn diện năng lực của học sinh.", content: { link: null, new: "Thực hiện bài kiểm tra tổng kết, đánh giá toàn diện năng lực của học sinh sau khi kết thúc học kỳ I." } }] }
-        ];
+    // --- DOM ELEMENTS ---
+    const timelineContainer = document.getElementById('timeline-container');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page');
+    const searchBar = document.getElementById('search-bar');
+    
+    // --- FUNCTIONS ---
+    function getChapterInfo(chapter) {
+        if (chapter.includes("Chương I")) return { key: 'chapter1', color: 'indigo', icon: 'fa-book' };
+        if (chapter.includes("Chương II")) return { key: 'chapter2', color: 'blue', icon: 'fa-chart-area' };
+        if (chapter.includes("Chương III")) return { key: 'chapter3', color: 'sky', icon: 'fa-wave-square' };
+        if (chapter.includes("Chương IV")) return { key: 'chapter4', color: 'emerald', icon: 'fa-ruler-combined' };
+        if (chapter.includes("Ôn tập")) return { key: 'review', color: 'amber', icon: 'fa-star' };
+        return { key: 'default', color: 'gray', icon: 'fa-lightbulb' };
+    }
 
-        // --- DOM ELEMENTS ---
-        const timelineContainer = document.getElementById('timeline-container');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const pages = document.querySelectorAll('.page');
-        const searchBar = document.getElementById('search-bar');
+    function createTopicCard(topic) {
+        const chapterInfo = getChapterInfo(topic.chapter);
+        const cardClass = chapterInfo.key === 'review' ? 'review-card' : '';
+        const timelineClass = chapterInfo.key === 'review' ? 'review' : 'chapter' + chapterInfo.key.slice(-1);
 
-        // --- FUNCTIONS ---
-        function getChapterInfo(chapter) {
-            if (chapter.includes("Chương I")) return { key: 'chapter1', color: 'indigo', icon: 'fa-book' };
-            if (chapter.includes("Chương II")) return { key: 'chapter2', color: 'blue', icon: 'fa-chart-area' };
-            if (chapter.includes("Chương III")) return { key: 'chapter3', color: 'sky', icon: 'fa-wave-square' };
-            if (chapter.includes("Chương IV")) return { key: 'chapter4', color: 'purple', icon: 'fa-ruler-combined' };
-            if (chapter.includes("Ôn tập")) return { key: 'review', color: 'amber', icon: 'fa-star' };
-            return { key: 'default', color: 'gray', icon: 'fa-lightbulb' };
-        }
-
-        function createTopicCard(topic) {
-            const chapterInfo = getChapterInfo(topic.chapter);
-            const cardClass = chapterInfo.key === 'review' ? 'review-card' : '';
-            const timelineClass = chapterInfo.key === 'review' ? 'review' : 'chapter' + chapterInfo.key.slice(-1);
-
-            return `
+        return `
             <div class="timeline-item ${timelineClass} mb-8 searchable-content">
                 <div class="bg-white rounded-xl shadow-lg p-6 ${cardClass} transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02]">
                     <div class="flex justify-between items-start gap-4">
@@ -455,15 +309,15 @@
                 </div>
             </div>
         `;
-        }
-
-        function renderTeachingPlan() {
-            if (!timelineContainer) return;
-            curriculumData.forEach(weekData => {
-                const weekItem = document.createElement('div');
-                weekItem.className = 'week-item';
-                const topicCards = weekData.topics.map(createTopicCard).join('');
-                weekItem.innerHTML = `
+    }
+    
+    function renderTeachingPlan() {
+        if (!timelineContainer) return;
+        curriculumData.forEach(weekData => {
+            const weekItem = document.createElement('div');
+            weekItem.className = 'week-item';
+            const topicCards = weekData.topics.map(createTopicCard).join('');
+            weekItem.innerHTML = `
                  <button class="week-button w-full text-left p-4 sm:p-5 flex justify-between items-center bg-white text-slate-700 rounded-lg shadow-sm hover:shadow-md ring-1 ring-slate-200 transition-all duration-300">
                     <div class="flex items-center">
                         <i class="fa-regular fa-calendar-alt mr-4 text-2xl text-indigo-400"></i>
@@ -477,108 +331,107 @@
                     </div>
                 </div>
             `;
-                timelineContainer.appendChild(weekItem);
-            });
-
-            const weekItems = document.querySelectorAll('.week-item');
-            weekItems.forEach(item => {
-                const button = item.querySelector('button');
-                if (button) {
-                    button.addEventListener('click', () => {
-                        item.classList.toggle('active');
-                    });
-                }
-            });
-
-            if (weekItems.length > 0) {
-                weekItems[0].classList.add('active');
-            }
-        }
-
-        function switchPage(targetId) {
-            pages.forEach(page => {
-                if (page) {
-                    page.style.display = 'none';
-                    page.classList.remove('active');
-                    if (page.id === targetId) {
-                        page.style.display = 'block';
-                        page.classList.add('active');
-                    }
-                }
-            });
-            navLinks.forEach(link => {
-                if (link) {
-                    link.classList.remove('active');
-                    if (link.dataset.target === targetId) {
-                        link.classList.add('active');
-                    }
-                }
-            });
-        }
-
-        function handleSearch() {
-            if (!searchBar) return;
-            const query = searchBar.value.toLowerCase().trim();
-            const activePage = document.querySelector('.page.active');
-            if (!activePage) return;
-
-            const allContent = activePage.querySelectorAll('.searchable-content');
-
-            allContent.forEach(el => {
-                const textContent = el.innerText.toLowerCase();
-                if (el.initialHTML === undefined) {
-                    el.initialHTML = el.innerHTML;
-                }
-
-                const isVisible = query === "" || textContent.includes(query);
-                el.style.display = isVisible ? "" : "none";
-
-                if (isVisible && query !== "") {
-                    const regex = new RegExp(query, 'gi');
-                    el.innerHTML = el.initialHTML.replace(regex, (match) => `<mark>${match}</mark>`);
-                } else {
-                    el.innerHTML = el.initialHTML;
-                }
-            });
-
-            if (activePage.id === 'page-home') {
-                const weekItems = document.querySelectorAll('#page-home .week-item');
-                weekItems.forEach(week => {
-                    const hasVisibleContent = week.querySelector('.searchable-content[style*="display: block"], .searchable-content:not([style*="display: none"])');
-                    week.style.display = (hasVisibleContent || query === "") ? "" : "none";
+            timelineContainer.appendChild(weekItem);
+        });
+        
+        const weekItems = document.querySelectorAll('.week-item');
+        weekItems.forEach(item => {
+            const button = item.querySelector('button');
+            if (button) {
+                button.addEventListener('click', () => {
+                    item.classList.toggle('active');
                 });
             }
+        });
+        
+        if (weekItems.length > 0) {
+            weekItems[0].classList.add('active');
         }
-
-        // --- EVENT LISTENERS ---
+    }
+    
+    function switchPage(targetId) {
+        pages.forEach(page => {
+            if (page) {
+                page.style.display = 'none';
+                page.classList.remove('active');
+                if (page.id === targetId) {
+                    page.style.display = 'block';
+                    page.classList.add('active');
+                }
+            }
+        });
         navLinks.forEach(link => {
             if (link) {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.dataset.target;
-                    if (targetId) {
-                        switchPage(targetId);
-                        if (searchBar) searchBar.value = '';
-                        handleSearch();
-                    }
-                });
+                link.classList.remove('active');
+                if(link.dataset.target === targetId) {
+                    link.classList.add('active');
+                }
+            }
+        });
+    }
+
+    function handleSearch() {
+        if (!searchBar) return;
+        const query = searchBar.value.toLowerCase().trim();
+        const activePage = document.querySelector('.page.active');
+        if (!activePage) return;
+
+        const allContent = activePage.querySelectorAll('.searchable-content');
+
+        allContent.forEach(el => {
+            const textContent = el.innerText.toLowerCase();
+            if (el.initialHTML === undefined) {
+                el.initialHTML = el.innerHTML;
+            }
+            
+            const isVisible = query === "" || textContent.includes(query);
+            el.style.display = isVisible ? "" : "none";
+
+            if (isVisible && query !== "") {
+                 const regex = new RegExp(query, 'gi');
+                 el.innerHTML = el.initialHTML.replace(regex, (match) => `<mark>${match}</mark>`);
+            } else {
+                 el.innerHTML = el.initialHTML;
             }
         });
 
-        if (searchBar) {
-            searchBar.addEventListener('input', handleSearch);
+        if (activePage.id === 'page-home') {
+             const weekItems = document.querySelectorAll('#page-home .week-item');
+             weekItems.forEach(week => {
+                const hasVisibleContent = week.querySelector('.searchable-content[style*="display: block"], .searchable-content:not([style*="display: none"])');
+                 week.style.display = (hasVisibleContent || query === "") ? "" : "none";
+             });
         }
+    }
 
-        // --- INITIALIZATION ---
-        document.addEventListener('DOMContentLoaded', () => {
-            renderTeachingPlan();
-            switchPage('page-home');
-            const analysisContent = document.querySelectorAll('#page-analysis > div');
-            analysisContent.forEach(el => el.classList.add('searchable-content'));
-        });
+    // --- EVENT LISTENERS ---
+    navLinks.forEach(link => {
+        if(link) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.dataset.target;
+                if(targetId) {
+                  switchPage(targetId);
+                  if (searchBar) searchBar.value = '';
+                  handleSearch();
+                }
+            });
+        }
+    });
 
-    </script>
+    if(searchBar) {
+        searchBar.addEventListener('input', handleSearch);
+    }
+    
+    // --- INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+        renderTeachingPlan();
+        switchPage('page-home');
+        const analysisContent = document.querySelectorAll('#page-analysis > div');
+        analysisContent.forEach(el => el.classList.add('searchable-content'));
+    });
+
+</script>
 
 </body>
-
 </html>
